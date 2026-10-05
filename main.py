@@ -3,9 +3,8 @@ import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-# ===== بدل هاد التوكن بالتوكن ديالك =====
-TOKEN = "8558091536:AAF76-rb4Y1LcaKrL1hkJGQjHNzlOCuSms8"
-# =======================================
+ بدل هاد التوكن بالتوكن ديالك
+TOKEN =os.getenv ("TELEGRAM_BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
